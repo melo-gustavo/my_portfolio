@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Dark */
+    --background-primary-dark: #0A192F;
+    --color-text-dark: #8892B0;
+    /* Light */
+    --background-primary-light: white;
+    --color-text-light: black;
+}
+
+[theme="dark"] {
+    background-color: var(--background-primary-dark);
+    color: var(--color-text-dark)
+}
+
+[theme="light"] {
+    background-color: var(--background-primary-light);
+    color: var(--color-text-light)
+}
