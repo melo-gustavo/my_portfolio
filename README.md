@@ -1,4 +1,4 @@
-# my_portifolio
+# my_portfolio
 
 This project aims to work with React to build a frontend portfolio.
 
