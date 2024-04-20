@@ -5,9 +5,6 @@ import ListNavbar from "./components/ListNavbar"
 
 const Navbar = () => {
   const { currentTheme, setTheme } = useCurrentTheme()
-  const changeTheme = () => {
-    setTheme(currentTheme === "dark" ? "light" : "dark")
-  }
 
   return (
     <>
@@ -17,8 +14,8 @@ const Navbar = () => {
           <span className="text-blue-500 font-extrabold">M</span>
         </div>
         <div className="flex gap-5">
-            <ListNavbar />
-            <button onClick={() => changeTheme()}>Theme</button>
+            <ListNavbar currentTheme={currentTheme} />
+            <button onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}>Theme</button>
         </div>
       </div>
     </>
