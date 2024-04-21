@@ -10,7 +10,6 @@ export const useCurrentTheme = (defaultValue: string = "dark") => {
     localStorage.setItem("theme", theme)
     document.body.setAttribute("theme", theme)
     setCurrentTheme(theme)
-    currentTheme
   }
 
   return { currentTheme, setTheme }

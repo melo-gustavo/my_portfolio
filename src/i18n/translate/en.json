@@ -1,0 +1,13 @@
+{
+  "translation": {
+    "navbar": {
+        "changeTheme": "Theme",
+        "changeLanguage": "Language",
+        "listNavbar": {
+          "home": "Home",
+          "about": "About",
+          "contact": "Contact"
+        }
+    }
+  }
+}
