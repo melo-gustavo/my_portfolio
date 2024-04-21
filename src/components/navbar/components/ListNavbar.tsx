@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
+import { useCurrentLanguage } from "../../../hooks/useCurrentLanguage"
 
 interface Props {
   currentTheme: string
 }
 
 const ListNavbar = (props: Props) => {
+  const { t } = useCurrentLanguage()
+
   return (
     <ul className="flex gap-5">
       <li
@@ -12,21 +15,21 @@ const ListNavbar = (props: Props) => {
           props.currentTheme === "dark" ? "li-navbar-dark" : "li-navbar-light"
         }
       >
-        <Link to={"/"}>Home</Link>
+        <Link to={"/"}>{t("navbar.listNavbar.home")}</Link>
       </li>
       <li
         className={
           props.currentTheme === "dark" ? "li-navbar-dark" : "li-navbar-light"
         }
       >
-        <Link to={"/about"}>About</Link>
+        <Link to={"/about"}>{t("navbar.listNavbar.about")}</Link>
       </li>
       <li
         className={
           props.currentTheme === "dark" ? "li-navbar-dark" : "li-navbar-light"
         }
       >
-        <Link to={"/contact"}>Contact</Link>
+        <Link to={"/contact"}>{t("navbar.listNavbar.contact")}</Link>
       </li>
     </ul>
   )
