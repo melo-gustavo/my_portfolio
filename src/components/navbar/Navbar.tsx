@@ -1,7 +1,9 @@
 import "./styles/dark.css"
 import "./styles/light.css"
-import { useCurrentTheme } from "../../hooks/useCurrentTheme" 
+import { useCurrentTheme } from "../../hooks/useCurrentTheme"
 import ListNavbar from "./components/ListNavbar"
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
+import DividerVertical from "../divider/DividerVertical"
 
 const Navbar = () => {
   const { currentTheme, setTheme } = useCurrentTheme()
@@ -13,9 +15,19 @@ const Navbar = () => {
           <span className="text-green-500 font-extrabold">G</span>
           <span className="text-blue-500 font-extrabold">M</span>
         </div>
-        <div className="flex gap-5">
-            <ListNavbar currentTheme={currentTheme} />
-            <button onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}>Theme</button>
+        <div className="flex gap-5 items-center">
+          <ListNavbar currentTheme={currentTheme} />
+          <DividerVertical currentTheme={currentTheme} />
+          <>Theme: </>
+          <button
+            onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+          >
+            {currentTheme === "dark" ? (
+              <SunIcon className="h-6 w-6" />
+            ) : (
+              <MoonIcon className="h-5 w-5" />
+            )}
+          </button>
         </div>
       </div>
     </>

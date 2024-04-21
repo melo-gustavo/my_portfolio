@@ -2,21 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Body */
+
 :root {
-    /* Dark */
-    --background-primary-dark: #0A192F;
-    --color-text-dark: #8892B0;
-    /* Light */
-    --background-primary-light: white;
-    --color-text-light: black;
+  /* Dark */
+  --background-primary-dark: #0a192f;
+  --color-text-dark: #8892b0;
+  /* Light */
+  --background-primary-light: white;
+  --color-text-light: black;
 }
 
 [theme="dark"] {
-    background-color: var(--background-primary-dark);
-    color: var(--color-text-dark)
+  background-color: var(--background-primary-dark);
+  color: var(--color-text-dark);
 }
 
 [theme="light"] {
-    background-color: var(--background-primary-light);
-    color: var(--color-text-light)
+  background-color: var(--background-primary-light);
+  color: var(--color-text-light);
 }
